@@ -70,3 +70,64 @@ Model Deployment & API:
 
 Exposes the trained model as an API for production use.
 Containerization with Docker for easy deployment and scaling.
+
+
+
+part 3 --->
+
+Key Components Explained:
+Data Directory:
+
+Raw: Stores the raw unprocessed data as obtained from external sources.
+Processed: Cleaned, preprocessed, and transformed data ready for training.
+External: Datasets from external sources, which may include external pre-trained models.
+Augmented: Stores augmented data generated through techniques like rotation, scaling, or other transformations.
+Splits: Contains the data splits (training, validation, and test sets) to ensure correct evaluation and generalization.
+Notebooks:
+
+Data Exploration: Jupyter notebook to explore the dataset, visualize correlations, and understand data distribution.
+Feature Engineering: Notebook dedicated to creating meaningful features from raw data.
+Model Architecture Design: Experimentation with different ANN architectures suitable for multi-output regression (e.g., using multiple neurons for each output in the output layer).
+Hyperparameter Tuning: Focused on hyperparameter optimization, such as learning rate, batch size, optimizer choice, and model architecture settings.
+Model Evaluation: Evaluates the model's performance on the validation and test datasets, focusing on metrics such as R^2, Mean Absolute Error (MAE), and Root Mean Squared Error (RMSE).
+Source Code:
+
+Data Preprocessing: Functions to clean and preprocess the data (e.g., normalization, handling missing values).
+Feature Engineering: Scripts for generating new features or selecting the most impactful ones.
+Model Architecture: Defines the ANN structure for multi-output regression. This includes specifying the output layer with multiple nodes, each corresponding to a different target variable.
+Training: Implements the training process (model fitting), including the choice of loss function (e.g., mean squared error) and optimization algorithm.
+Evaluation: Scripts to evaluate the model using multiple metrics, considering each output separately or as a combined metric.
+Incremental Training: Handles incremental or online learning, updating the model without retraining from scratch when new data arrives.
+Hyperparameter Tuning: Includes code to perform grid search, random search, or Bayesian optimization for tuning hyperparameters like learning rate, batch size, etc.
+Config Directory:
+
+Global Configuration: Contains global parameters such as paths for saving models, logs, and configuration settings.
+Hyperparameter Configuration: Stores hyperparameter settings for different models or experiments.
+Training Configuration: Contains details on training setup (e.g., number of epochs, optimizer, batch size).
+Models Directory:
+
+Base Model: Stores the trained base models (initial training without incremental updates).
+Incremental Models: Contains models updated with new data over time through incremental training.
+Logs Directory:
+
+Training Logs: Logs related to the training process, including metrics and training status.
+Evaluation Logs: Logs related to the evaluation of the model, such as R^2 scores, RMSE, and MAE.
+Experiments Directory:
+
+Organizes different experiments (e.g., testing various architectures or hyperparameters) for easy comparison and reproducibility.
+Deployment:
+
+API: API code to serve the trained model, making predictions via RESTful endpoints (using Flask or FastAPI).
+Docker: Dockerfiles to containerize the entire pipeline and ensure consistency across environments.
+Kubernetes: Kubernetes configuration for scaling the deployment across multiple nodes.
+Model Serving: Code to manage serving models in production environments, including handling incoming requests and providing real-time predictions.
+UI:
+
+Dashboard: Web-based dashboard to visualize model performance metrics, training status, and evaluation results.
+Scripts: JavaScript and backend scripts to interact with the API and display real-time results.
+Requirements:
+
+requirements.txt: List of all the dependencies required for running the pipeline (TensorFlow, PyTorch, Flask, etc.).
+Deployment and UI Considerations:
+API: Allows the model to be served via HTTP, enabling easy integration with external systems.
+UI: Visualizes the model's performance and predictions, making it easier for end-users to interact with and understand the model's outputs.
