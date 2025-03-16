@@ -98,7 +98,7 @@ ann_deep_learning_pipeline/
 
 
 
-One More Part ---->
+Part 2 ---->
 
 dl_pipeline/
 ├── data/                         # Raw, processed, and external data sources
@@ -200,3 +200,68 @@ dl_pipeline/
     ├── prod_config.yaml          # Production-specific configuration (e.g., scaling, env variables)
     └── staging_config.yaml       # Staging configuration (for testing deployment before production)
 
+
+
+PART 3 -->
+
+multi_output_regression_pipeline/
+├── data/                                    # Data storage for raw, processed, and external data
+│   ├── raw/                                 # Raw data (unprocessed data collected from external sources)
+│   ├── processed/                           # Processed data (cleaned and preprocessed data ready for training)
+│   ├── external/                            # External data sources (e.g., pre-trained models, additional datasets)
+│   ├── augmented/                           # Augmented data (data generated via augmentation techniques)
+│   └── splits/                              # Data splits (train, validation, test)
+│
+├── notebooks/                               # Jupyter Notebooks or exploratory data analysis (EDA) scripts
+│   ├── 01_data_exploration.ipynb            # Initial data exploration and visualization
+│   ├── 02_feature_engineering.ipynb         # Feature engineering notebook
+│   ├── 03_model_architecture_design.ipynb   # Experimenting with different ANN architectures for multi-output regression
+│   ├── 04_hyperparameter_tuning.ipynb       # Hyperparameter optimization (e.g., grid search, random search)
+│   └── 05_model_evaluation.ipynb            # Evaluating the model’s performance (R^2, RMSE, MAE)
+│
+├── src/                                     # Source code directory
+│   ├── __init__.py                          # Initialization of the module
+│   ├── data_preprocessing.py                # Data preprocessing and cleaning functions
+│   ├── feature_engineering.py               # Feature extraction and selection functions
+│   ├── model_architecture.py               # Multi-output regression model design (architecture creation)
+│   ├── training.py                         # Training script (handles training loop, epochs, loss functions, optimizers)
+│   ├── evaluation.py                       # Evaluation script (R^2, MAE, RMSE, multi-output loss calculations)
+│   ├── hyperparameter_tuning.py            # Hyperparameter optimization functions (GridSearch, RandomSearch)
+│   ├── incremental_training.py             # Handles incremental training and model updates
+│   └── utils.py                            # Utility functions (e.g., logging, saving/loading models, callbacks)
+│
+├── config/                                  # Configuration files
+│   ├── config.yaml                         # Global configuration (paths, hyperparameters, logging settings)
+│   ├── hyperparameters.yaml                # Hyperparameter configurations for different models
+│   └── training_config.yaml                # Configuration for the training process (epochs, batch size, optimizer type)
+│
+├── models/                                  # Saved models
+│   ├── base_model/                         # Folder for storing base trained models
+│   └── incremental_models/                 # Folder for storing incremental models
+│
+├── logs/                                    # Logs (training and evaluation logs)
+│   ├── training_logs/                      # Logs related to the training process
+│   └── evaluation_logs/                     # Logs related to model evaluation metrics and graphs
+│
+├── experiments/                             # Logs and configurations of different experiments
+│   ├── experiment_001/                      # Folder for experiment 001
+│   │   ├── config.yaml                     # Experiment-specific config file
+│   │   ├── model/                          # Experiment model weights
+│   │   └── evaluation/                     # Evaluation results for this experiment
+│   └── experiment_002/                      # Folder for experiment 002 (for comparative experiments)
+│
+├── deployment/                              # Deployment-related files
+│   ├── api/                                # API files for model serving (e.g., Flask, FastAPI)
+│   ├── docker/                             # Docker files for containerizing the model
+│   ├── kubernetes/                         # Kubernetes configurations for scaling deployment
+│   ├── deployment_config.yaml             # Deployment-specific configurations
+│   └── model_serving/                      # Serving scripts for API calls and inference
+│
+├── ui/                                      # Frontend UI for model evaluation and visualization
+│   ├── dashboard/                          # Dashboard directory with visualizations
+│   │   ├── index.html                      # HTML dashboard to display model metrics and results
+│   │   ├── app.js                          # JavaScript for dynamic content (e.g., graphs, tables)
+│   │   ├── style.css                       # CSS for styling the dashboard
+│   └── scripts/                             # Scripts for interacting with the backend model
+│
+└── requirements.txt                        # Python dependencies (e.g., TensorFlow, PyTorch, Flask, etc.)
