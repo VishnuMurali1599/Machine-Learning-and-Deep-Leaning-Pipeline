@@ -205,3 +205,30 @@ spaCy or NLTK: For basic NLP tasks like tokenization, named entity recognition, 
 TensorFlow / PyTorch: For building and training any custom RNN, LSTM, or transformer models.
 OpenAI API: To use GPT models for text-based tasks.
 
+
+
+
+
+
+
+
+*************
+
+
+Prompts
+
+
+
+i have create a automation code that will generate a results in Excel two - three sheets using python code and that python code is already built need to use only that, but user should not see that code. 
+Now can i automate that entire code using LLM and just apply simple words as prompt and gets the entire output of result sheets based on the input prompt and files provided.
+
+
+But also im studying LLM , so this above project should help me in covering all areas like From pre-processing ,all vectors topics , all embeddings technique , RNN , LSTM Transformers , Encoder - decoder ,attention mechanisms and advance topic..
+So this project should help me in covering all topics and final it helps in building project also 
+
+how can i process this pipeline 
+Give me in detail pipeline 
+
+
+
+
