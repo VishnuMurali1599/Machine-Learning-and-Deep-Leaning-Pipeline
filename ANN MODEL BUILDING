@@ -1,0 +1,68 @@
+├── src/
+│   ├── data_preprocessing/
+│   │   ├── __init__.py
+│   │   ├── load_data.py           # Script to load datasets (e.g., MNIST, Boston Housing)
+│   │   ├── clean_data.py          # Handle missing values, outliers, etc.
+│   │   ├── scale_data.py          # Normalization, Min-Max Scaling
+│   │   ├── split_data.py          # Split dataset into train, validation, and test sets
+│   │   ├── one_hot_encoding.py    # One-hot encode the labels (if classification)
+│   │   └── visualize_data.py      # Data visualization (e.g., histograms, scatter plots)
+│   ├── model/
+│   │   ├── __init__.py
+│   │   ├── perceptron.py          # Single-layer perceptron model
+│   │   ├── mlp.py                 # Multi-layer perceptron (MLP) model
+│   │   ├── activation_functions.py # Functions for ReLU, Sigmoid, Softmax, etc.
+│   │   ├── forward_propagation.py # Forward pass for perceptron and MLP
+│   │   ├── backpropagation.py     # Backpropagation implementation
+│   │   ├── loss_functions.py      # MSE for regression, Cross-Entropy for classification
+│   │   └── gradient_descent.py    # Gradient descent, SGD, Adam, RMSProp, etc.
+│   ├── optimization/
+│   │   ├── __init__.py
+│   │   ├── sgd_optimizer.py       # Stochastic Gradient Descent
+│   │   ├── adam_optimizer.py      # Adam Optimizer implementation
+│   │   ├── rmsprop_optimizer.py   # RMSProp Optimizer
+│   │   ├── momentum_optimizer.py  # NAG or Momentum-based optimization
+│   │   ├── batch_normalization.py # Batch Normalization
+│   │   └── regularization.py      # L1/L2 regularization
+│   ├── training/
+│   │   ├── __init__.py
+│   │   ├── train.py               # Model training loop
+│   │   ├── evaluate.py            # Model evaluation (accuracy, loss, etc.)
+│   │   ├── early_stopping.py      # Early stopping mechanism to avoid overfitting
+│   │   └── dropout.py             # Dropout implementation
+│   ├── hyperparameter_tuning/
+│   │   ├── __init__.py
+│   │   ├── grid_search.py         # Grid Search for hyperparameter tuning
+│   │   └── random_search.py       # Random Search for hyperparameter tuning
+│   ├── evaluation/
+│   │   ├── __init__.py
+│   │   ├── metrics.py             # Accuracy, Precision, Recall, F1-Score
+│   │   ├── loss_curve.py          # Plot loss curves
+│   │   ├── accuracy_curve.py      # Plot accuracy curves
+│   │   └── confusion_matrix.py    # Confusion Matrix for classification
+│   ├── report/
+│   │   ├── __init__.py
+│   │   ├── generate_report.py     # Generate CSV/Excel reports with metrics
+│   │   └── visualize_results.py   # Visualize model results and predictions
+│   ├── utils/
+│   │   ├── __init__.py
+│   │   ├── file_utils.py          # Helper functions for reading/writing files
+│   │   ├── data_utils.py          # Utility functions for data preprocessing
+│   │   └── model_utils.py         # Helper functions for model evaluation and results tracking
+│   ├── main.py                    # Main script to run the model pipeline
+│   ├── config.py                  # Configuration file (hyperparameters, model settings)
+└── README.md                      # Project documentation (Overview, Setup, Usage)
+
+
+
+I want to create a Deep Learning ANN Project ,
+In that project  it should cover all topics of ANN from starting Of ANN end to end like ( perceptron single to multiple, Loss Function of all reggression and classification, 
+Forward Propagation , Backward Propagation,  MLP memoization ,Gradient descent techinque all there types , vanishing Gradient Descent , improving performance of neural network , 
+early stopping , Dropout ,Reguralization , Actication function, Weight Intialization (Xavier and He), Batch Normalization , Optimizers (SGD,NAG,ADAGRAD,RMSPROP) and all others 
+parameters 
+
+Give me a complete pipeline of the project so that i can cover all these topics praticaly and include in my project
+
+
+and also by using all parameters and concept mentioned above i want detail excel or any file format report on saying how the model has behaved with using parameters and without
+using parameters.
